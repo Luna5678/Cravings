@@ -17,4 +17,8 @@ Cravings is an app for searching restaurants in Los Angeles, CA. You can search 
 </ul>
 
 <h2>Wireframes</h2>
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FucqG6Audj8B3yUWCkal54t%2FCravings%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+https://www.figma.com/file/ucqG6Audj8B3yUWCkal54t/Cravings?node-id=0%3A1
+
+<h2>Design</h2>
+![Cravings-img](https://user-images.githubusercontent.com/70084759/132445707-d5059d5a-2a6c-4faa-bc32-5a18d3cb9b1d.png)
+
