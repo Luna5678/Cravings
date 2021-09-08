@@ -16,11 +16,10 @@ Cravings is an app for searching restaurants in Los Angeles, CA. You can search 
 <li>Bcrypt</li>
 </ul>
 
-<h2>Wireframes</h2>
-https://www.figma.com/file/ucqG6Audj8B3yUWCkal54t/Cravings?node-id=0%3A1
+<h2>Wireframes and Design</h2>
+Wireframe: https://www.figma.com/file/ucqG6Audj8B3yUWCkal54t/Cravings?node-id=0%3A1
 
-<h2>Design</h2>
-![Cravings-img](https://user-images.githubusercontent.com/70084759/132445707-d5059d5a-2a6c-4faa-bc32-5a18d3cb9b1d.png)
+Color palette: https://user-images.githubusercontent.com/70084759/132445707-d5059d5a-2a6c-4faa-bc32-5a18d3cb9b1d.png
 
 
 <h2>User Stories</h2>
