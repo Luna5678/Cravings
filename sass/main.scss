@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
+
+$logo-font-stack: "Cookie", cursive;
+$heading-font-stack: "Playfair Display", serif;
+$body-font-stack: "Open Sans", sans-serif;
+
+h1,
+h2 {
+  font-family: $heading-font-stack;
+}
+
+p {
+  font-family: $body-font-stack;
+}
