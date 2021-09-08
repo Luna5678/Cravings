@@ -67,6 +67,7 @@ Color palette: https://user-images.githubusercontent.com/70084759/132445707-d505
   </li>
   <li>When logged out, user gets redirected to homepage with updated navbar</li>
   <li>When logged in, the user gets redirected to their profile</li>
+  <li>Users can view other users' profiles, which will contain the username, image, bio, and reviews history</li>
 </ol>
 
 <h3>Sprint 3: Reviews</h3>
@@ -95,6 +96,4 @@ Color palette: https://user-images.githubusercontent.com/70084759/132445707-d505
   <li>Other users can upvote someone else's review</li>
   <li>Users can upload images to their reviews</li>
   <li>Light mode and dark mode</li>
-  <li></li>
-  <li></li>
 </ol>
