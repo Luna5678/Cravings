@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+require('./config/db.connection');
+
 const PORT = 4000;
 
 // SECTION Internal Modules
