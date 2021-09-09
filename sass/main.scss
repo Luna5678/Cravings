@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
 
+// SECTION CSS Variables
+
 $logo-font-stack: "Cookie", cursive;
 $heading-font-stack: "Playfair Display", serif;
 $body-font-stack: "Open Sans", sans-serif;
+$primary: #f58129;
+
+// SECTION Global
 
 h1,
 h2 {
   font-family: $heading-font-stack;
+  color: $primary;
 }
 
 p {
@@ -25,6 +31,24 @@ main {
   background-color: #fff5c2;
 }
 
+.search-border {
+  border-color: $primary !important;
+}
+
+.search-button {
+  background-color: $primary;
+}
+
+// SECTION Homepage
+
 .home-search {
   width: 80%;
+}
+
+.home-img-1 {
+  width: 400px;
+}
+
+.home-img-2 {
+  width: 350px;
 }

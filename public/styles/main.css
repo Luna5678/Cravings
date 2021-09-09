@@ -2,6 +2,7 @@
 h1,
 h2 {
   font-family: "Playfair Display", serif;
+  color: #f58129;
 }
 
 p {
@@ -20,8 +21,24 @@ main {
   background-color: #fff5c2;
 }
 
+.search-border {
+  border-color: #f58129 !important;
+}
+
+.search-button {
+  background-color: #f58129;
+}
+
 .home-search {
   width: 80%;
+}
+
+.home-img-1 {
+  width: 400px;
+}
+
+.home-img-2 {
+  width: 350px;
 }
 
 /*# sourceMappingURL=main.css.map */
