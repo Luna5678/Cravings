@@ -43,6 +43,10 @@ header img {
   background-color: #f58129;
 }
 
+a {
+  color: #1f1f1f;
+}
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -77,6 +81,11 @@ header img {
   width: 350px;
 }
 
+a#restaurant-link {
+  color: #1f1f1f;
+  text-decoration: none !important;
+}
+
 .restaurant-index-cards {
   height: 300px;
   overflow: hidden;
@@ -93,6 +102,11 @@ header img {
 .search-bar-index {
   max-width: 700px;
   align-self: center;
+}
+
+.cards-link {
+  color: #1f1f1f;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */

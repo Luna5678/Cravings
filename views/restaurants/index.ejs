@@ -30,6 +30,7 @@
       <div>
         <% for (let i=0; i < restaurants.length; i++) { %> 
         <% const restaurant = restaurants[i] %> 
+          <a href="/restaurants/<%= restaurant.id %>" id="restaurant-link">
           <div class="card mb-3">
             <div class="row g-0">
 
@@ -64,18 +65,8 @@
 
             </div>
           </div>
-            
-            <!-- <h4><%= restaurant.phone %></h4>
-            
+          </a>
 
-            
-
-            <p><%= restaurant.location.address %></p>
-            <p><%= restaurant.location.city %>, <%= restaurant.location.state %> <%= restaurant.location.zipcode %></p> -->
-            
-            
-            
-            
           </div>
         <% } %> 
       </div>

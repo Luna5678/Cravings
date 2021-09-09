@@ -9,11 +9,12 @@ const restaurantControllers = require('./controllers/restaurant_controllers');
 
 
 // SECTION Middleware 
+app.set('view engine', 'ejs');
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 // Views
-app.set('view engine', 'ejs');
 
 
 // Custom middleware logger
