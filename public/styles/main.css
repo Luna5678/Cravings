@@ -18,7 +18,11 @@ main {
   width: 80%;
   max-width: 1200px;
   margin: auto;
-  background-color: #fff5c2;
+  background-color: #eeeef1;
+}
+
+input {
+  font-family: "Open Sans", sans-serif;
 }
 
 .search-border {
@@ -29,8 +33,30 @@ main {
   background-color: #f58129;
 }
 
+.navbar {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#logo {
+  font-family: "Cookie", cursive;
+  font-size: 34px;
+  padding-left: 8px !important;
+  color: #eb4d47;
+}
+
+.nav-link {
+  color: #1f1f1f;
+  border-radius: 50px;
+}
+
+.nav-link:hover {
+  background-color: #eb4d47;
+  color: white;
+  border-radius: 50px !important;
+}
+
 .home-search {
-  width: 80%;
+  width: 70%;
 }
 
 .home-img-1 {

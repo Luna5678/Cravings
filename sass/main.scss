@@ -5,14 +5,21 @@
 $logo-font-stack: "Cookie", cursive;
 $heading-font-stack: "Playfair Display", serif;
 $body-font-stack: "Open Sans", sans-serif;
-$primary: #f58129;
+$dark-red-color: #ce1b12;
+$light-red-color: #eb4d47;
+$orange-color: #f58129;
+$yellow-color: #fff5c2;
+$light-green-color: #54c981;
+$dark-green-color: #2a7a47;
+$black-color: #1f1f1f;
+$grey-color: #eeeef1;
 
 // SECTION Global
 
 h1,
 h2 {
   font-family: $heading-font-stack;
-  color: $primary;
+  color: $orange-color;
 }
 
 p {
@@ -28,21 +35,48 @@ main {
   width: 80%;
   max-width: 1200px;
   margin: auto;
-  background-color: #fff5c2;
+  background-color: $grey-color;
+}
+
+input {
+  font-family: $body-font-stack;
 }
 
 .search-border {
-  border-color: $primary !important;
+  border-color: $orange-color !important;
 }
 
 .search-button {
-  background-color: $primary;
+  background-color: $orange-color;
+}
+
+// SECTION Navbar
+.navbar {
+  background-color: rgba($color: #fff, $alpha: 0.8);
+}
+
+#logo {
+  font-family: $logo-font-stack;
+  font-size: 34px;
+  padding-left: 8px !important;
+  color: $light-red-color;
+}
+
+.nav-link {
+  color: $black-color;
+  border-radius: 50px;
+}
+
+.nav-link:hover {
+  background-color: $light-red-color;
+  color: white;
+  border-radius: 50px !important;
 }
 
 // SECTION Homepage
 
 .home-search {
-  width: 80%;
+  width: 70%;
 }
 
 .home-img-1 {
