@@ -8,4 +8,20 @@ p {
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff5c2;
+}
+
+.home-search {
+  width: 80%;
+}
+
 /*# sourceMappingURL=main.css.map */
