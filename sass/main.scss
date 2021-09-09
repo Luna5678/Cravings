@@ -17,7 +17,8 @@ $grey-color: #eeeef1;
 // SECTION Global
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: $heading-font-stack;
   color: $orange-color;
 }
@@ -42,6 +43,16 @@ input {
   font-family: $body-font-stack;
 }
 
+header {
+  height: 50vh;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 .search-border {
   border-color: $orange-color !important;
 }
@@ -54,10 +65,6 @@ input {
 .navbar {
   background-color: rgba($color: #fff, $alpha: 0.8);
 }
-
-// .navbar-brand {
-//   margin-left: 60px;
-// }
 
 #logo {
   font-family: $logo-font-stack;
@@ -89,4 +96,25 @@ input {
 
 .home-img-2 {
   width: 350px;
+}
+
+// SECTION Restaurant Index Page
+
+.restaurant-index-cards {
+  height: 300px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.restaurant-card-body {
+  background-color: $yellow-color;
+}
+
+.search-bar-index {
+  max-width: 700px;
+  align-self: center;
 }

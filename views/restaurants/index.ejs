@@ -5,26 +5,77 @@
   <body>
     <%- include('../partials/nav') %>
     <main>
-      <h1>Restaurants</h1>
+      <header class="banner-img">
+        <img src="images/restaurant-index.jpg" alt="Brunch food">
+      </header>
+      
+      <h1 class="text-center my-4">Restaurants</h1>
 
+      <div>
+        <form>
+          <div class="mb-5 input-group justify-content-center">
+            <h2 class="me-3">Search </h2>
+            <input type="text" class="form-control me-2 rounded-pill border border-3 py-2 search-border search-bar-index"
+              placeholder="Search by restaurant or cuisine">
+            <button class="rounded-circle px-2 border search-border search-button"><svg xmlns="http://www.w3.org/2000/svg"
+                width="26" height="26" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg></button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Restaurant list -->
       <div>
         <% for (let i=0; i < restaurants.length; i++) { %> 
         <% const restaurant = restaurants[i] %> 
-          <div>
-            <h3><%= restaurant.name %></h3>
-            <h4><%= restaurant.phone %></h4>
-            <img src="<%= restaurant.image %>" alt="<%= restaurant.name %> ">
+          <div class="card mb-3">
+            <div class="row g-0">
 
-            <p><%= restaurant.categories %></p>
+              <div class="col-md-4 restaurant-index-cards">
+                </span><img src="<%= restaurant.image %>" alt="<%= restaurant.name %>" class="rounded-start">
+              </div>
 
-            <!-- <% for (let i=0; i < restaurant.categories.length; i++) { %> 
-              <% const category = restaurant.categories[i] %> 
-                <p><% category %> </p>
-            <% } %>  -->
+              <div class="col-md-8 restaurant-card-body ps-5">
+                <div class="card-body">
+                  <h3 class="card-title row mx-auto"><%= restaurant.name %></h3>
+                  <div class="row">
+                    <div class="col">
+                      <% const categoryArray=restaurant.categories %>
+                    <% categoryArray.forEach(element=> { %>
+                      <p class="card-text"><%= element %></p>
+                    <% }) %>
+                    </div>
+                    
+                    <div class="col lh-1">
+                      <p><small>Sunday: <%= restaurant.hours[0] %></small></p>
+                      <p><small>Monday: <%= restaurant.hours[1] %></small></p>
+                      <p><small>Tuesday: <%= restaurant.hours[2] %></small></p>
+                      <p><small>Wednesday: <%= restaurant.hours[3] %></small></p>
+                      <p><small>Thursday: <%= restaurant.hours[4] %></small></p>
+                      <p><small>Friday: <%= restaurant.hours[5] %></small></p>
+                      <p><small>Saturday: <%= restaurant.hours[6] %></small></p>
+                  </div>
+                  </div>
+                    
+                </div>
+              </div>
+
+            </div>
+          </div>
+            
+            <!-- <h4><%= restaurant.phone %></h4>
+            
+
+            
 
             <p><%= restaurant.location.address %></p>
-            <p><%= restaurant.location.city %>, <%= restaurant.location.state %> <%= restaurant.location.zipcode %></p>
-
+            <p><%= restaurant.location.city %>, <%= restaurant.location.state %> <%= restaurant.location.zipcode %></p> -->
+            
+            
+            
+            
           </div>
         <% } %> 
       </div>

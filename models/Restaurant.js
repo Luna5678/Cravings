@@ -16,7 +16,8 @@ const RestaurantSchema = new mongoose.Schema(
       country: String,
       state: String
     },
-    phone: String
+    phone: String,
+    hours: [String],
   }
 )
 

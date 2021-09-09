@@ -17,7 +17,14 @@ Restaurant.deleteMany({}, function(error, deletedRestaurants) {
           country: "US",
           state: "CA"
         },
-        phone: "2139358399"
+        phone: "2139358399",
+        hours: ["Closed", 
+          "Closed", 
+          "10:00 AM - 7:00 PM", 
+          "10:00 AM - 7:00 PM", 
+          "10:00 AM - 7:00 PM", 
+          "10:00 AM - 7:00 PM", 
+          "10:00 AM - 7:00 PM"]
       },
       {
         name: "Wurstküche",
@@ -30,7 +37,14 @@ Restaurant.deleteMany({}, function(error, deletedRestaurants) {
           country: "US",
           state: "CA",
         },
-        phone: "2136874444"
+        phone: "2136874444",
+        hours: ["11:30 AM - 10:00 PM", 
+          "11:30 AM - 10:00 PM", 
+          "11:30 AM - 10:00 PM", 
+          "11:30 AM - 10:00 PM", 
+          "11:30 AM - 10:00 PM", 
+          "11:30 AM - 12:00 AM (Next day)", 
+          "11:30 AM - 12:00 AM (Next day)"]
       },
       {
         name: "Slurpin' Ramen Bar - Los Angeles",
@@ -43,7 +57,14 @@ Restaurant.deleteMany({}, function(error, deletedRestaurants) {
           country: "US",
           state: "CA",
         },
-        phone: "2133888607"
+        phone: "2133888607",
+        hours: ["11:30 AM - 1:00 AM (Next day)", 
+          "11:30 AM - 1:00 AM (Next day)", 
+          "11:30 AM - 1:00 AM (Next day)", 
+          "11:30 AM - 1:00 AM (Next day)", 
+          "11:30 AM - 1:00 AM (Next day)", 
+          "11:30 AM - 1:00 AM (Next day)", 
+          "11:30 AM - 1:00 AM (Next day)"]
       },
       {
         name: "Morrison Atwater Village",
@@ -56,7 +77,15 @@ Restaurant.deleteMany({}, function(error, deletedRestaurants) {
           country: "US",
           state: "CA",
         },
-        phone: "3236671839"
+        phone: "3236671839",
+        hours: ["12:00 PM - 9:00 PM",
+          "12:00 PM - 9:00 PM",
+          "12:00 PM - 9:00 PM",
+          "12:00 PM - 9:00 PM", 
+          "12:00 PM - 10:00 PM", 
+          "12:00 PM - 11:00 PM", 
+          "12:00 PM - 11:00 PM"
+          ]
       },
       {
         name: "Daikokuya Little Tokyo",
@@ -70,6 +99,13 @@ Restaurant.deleteMany({}, function(error, deletedRestaurants) {
           state: "CA"
         },
         phone: "2136261680",
+        hours: ["11:00 AM - 10:00 PM", 
+        "11:00 AM - 10:00 PM", 
+        "11:00 AM - 10:00 PM", 
+        "11:00 AM - 10:00 PM", 
+        "11:00 AM - 10:00 PM", 
+        "11:00 AM - 10:00 PM", 
+        "11:00 AM - 10:00 PM"]
       }
     ],
   

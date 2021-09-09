@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Playfair Display", serif;
   color: #f58129;
 }
@@ -23,6 +24,15 @@ main {
 
 input {
   font-family: "Open Sans", sans-serif;
+}
+
+header {
+  height: 50vh;
+  overflow: hidden;
+}
+header img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .search-border {
@@ -65,6 +75,24 @@ input {
 
 .home-img-2 {
   width: 350px;
+}
+
+.restaurant-index-cards {
+  height: 300px;
+  overflow: hidden;
+}
+.restaurant-index-cards img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.restaurant-card-body {
+  background-color: #fff5c2;
+}
+
+.search-bar-index {
+  max-width: 700px;
+  align-self: center;
 }
 
 /*# sourceMappingURL=main.css.map */
