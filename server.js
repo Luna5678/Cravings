@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Views
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+
 
 // Custom middleware logger
 function logger(req,res,next) {

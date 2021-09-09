@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', { page: "Restaurants" }) %>
+
+  <body>
+    <%- include('../partials/nav') %>
+    <main>
+      <h1>Restaurants</h1>
+
+      <div>
+        <% for (let i=0; i < restaurants.length; i++) { %> 
+        <% const restaurant = restaurants[i] %> 
+          <div>
+            <h3><%= restaurant.name %></h3>
+            <h4><%= restaurant.phone %></h4>
+            <img src="<%= restaurant.image %>" alt="<%= restaurant.name %> ">
+
+            <p><%= restaurant.categories %></p>
+
+            <!-- <% for (let i=0; i < restaurant.categories.length; i++) { %> 
+              <% const category = restaurant.categories[i] %> 
+                <p><% category %> </p>
+            <% } %>  -->
+
+            <p><%= restaurant.location.address %></p>
+            <p><%= restaurant.location.city %>, <%= restaurant.location.state %> <%= restaurant.location.zipcode %></p>
+
+          </div>
+        <% } %> 
+      </div>
+    </main>
+    
+  </body>
+
+</html>
