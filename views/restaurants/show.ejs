@@ -35,7 +35,15 @@
                   <%= restaurant.location.zipcode %>
             </p>
             <p>
-              <%= restaurant.phone %>
+              <a href="tel:<%= restaurant.phone %>">
+                <% const formatPhoneNumber = (phone) => { %>
+                  <% let match = phone.match(/(\d{3})(\d{3})(\d{4})/); %>
+                  <% if (match) { %>
+                    <% return ['(', match[1], ') ', match[2], '-', match[3]].join('') %>
+                  <% } else console.log("error with phone format") %>
+                <% } %> 
+                <p><%= formatPhoneNumber(restaurant.phone) %></p>
+              </a>
             </p>
           </div>
         </div>
