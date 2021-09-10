@@ -4,6 +4,11 @@ require('./config/db.connection');
 const PORT = 4000;
 
 
+// SECTION Auth Modules
+// const session = require('express-session');
+// const MongoStore = require('connect-mongo');
+
+
 // SECTION Internal Modules
 const restaurantControllers = require('./controllers/restaurant_controllers');
 
@@ -11,11 +16,15 @@ const restaurantControllers = require('./controllers/restaurant_controllers');
 // SECTION Middleware 
 app.set('view engine', 'ejs');
 
+// Session controller
+// app.use(
+//   session({
+//     store: MongoStore.create()
+//   })
+// );
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
-
-// Views
-
 
 // Custom middleware logger
 function logger(req,res,next) {
