@@ -4,6 +4,45 @@
 
 <body>
   <%- include('../partials/nav') %> 
-  <h1><%= restaurant.name %></h1>
+  <main>
+    <header>
+      <img src="<%= restaurant.image %>" alt="">
+    </header>
+    <h1><%= restaurant.name %></h1>
+
+    <h2>Who</h2>
+    <p><%= restaurant.name %></p>
+
+    <h2>What</h2>
+    <p>
+      <% const categoryArray=restaurant.categories %>
+        <% categoryArray.forEach(element=> { %>
+            #<%= element %> 
+        <% }) %>
+    </p>
+    <a href="#">View Menu</a>
+
+    <h2>Where</h2>
+    <p>
+      <%= restaurant.location.address %>
+    </p>
+    <p>
+      <%= restaurant.location.city %>, <%= restaurant.location.state %>
+          <%= restaurant.location.zipcode %>
+    </p>
+    <p><%= restaurant.phone %> </p>
+
+    <h2>When</h2>
+    <p>Sunday: <%= restaurant.hours[0] %></p>
+    <p>Monday: <%= restaurant.hours[1] %></p>
+    <p>Tuesday: <%= restaurant.hours[2] %></p>
+    <p>Wednesday: <%= restaurant.hours[3] %></p>
+    <p>Thursday: <%= restaurant.hours[4] %></p>
+    <p>Friday: <%= restaurant.hours[5] %></p>
+    <p>Saturday: <%= restaurant.hours[6] %></p>
+
+    <h2>Why</h2>
+    <hr>
+  </main>
 </body>
 </html>
