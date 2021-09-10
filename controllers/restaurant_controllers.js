@@ -33,4 +33,21 @@ router.get('/:id', async(req,res,next) => {
   }
 })
 
+// router.get('/search', function (req,res,next) {
+//   const q = req.query.q;
+
+//   Restaurant.find({
+//     name: {
+//       $regex: new RegExp(q)
+//     },
+//     categories: {
+
+//     }
+//   }, {
+
+//   }
+  
+//   )
+// })
+
 module.exports = router;
