@@ -1,8 +1,7 @@
 const { response } = require('express');
 const express = require('express');
 const router = express.Router();
-require('../config/db.connection');
-const Restaurant = require('../models/Restaurant');
+const { Restaurant } = require('../models');
 
 router.get('/', async (req,res,next) => {
   try {

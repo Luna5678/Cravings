@@ -11,7 +11,7 @@ const MongoStore = require('connect-mongo');
 
 
 // SECTION Internal Modules
-const restaurantControllers = require('./controllers/restaurant_controllers');
+const controllers = require('./controllers');
 
 
 // SECTION Middleware 
@@ -49,7 +49,7 @@ app.get('/', (req,res) => {
   res.render('home');
 });
 
-app.use('/restaurants', restaurantControllers);
+app.use('/restaurants', controllers.restaurant);
 
 app.get('/*', (req, res) => {
   res.send('Uh oh error')

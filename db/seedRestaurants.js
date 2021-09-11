@@ -1,5 +1,4 @@
-require('../config/db.connection');
-const Restaurant = require('../models/Restaurant');
+const { Restaurant } = require('../models');
 
 Restaurant.deleteMany({}, function(error, deletedRestaurants) {
   if (error) return console.log(error);
