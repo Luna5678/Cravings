@@ -137,3 +137,9 @@ a#restaurant-link {
 .red-heading {
   color: $dark-red-color;
 }
+
+.avatar-img {
+  width: 125px;
+  box-sizing: border-box;
+  border: $yellow-color solid 5px;
+}

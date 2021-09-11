@@ -113,4 +113,10 @@ a#restaurant-link {
   color: #ce1b12;
 }
 
+.avatar-img {
+  width: 125px;
+  box-sizing: border-box;
+  border: #fff5c2 solid 5px;
+}
+
 /*# sourceMappingURL=main.css.map */
