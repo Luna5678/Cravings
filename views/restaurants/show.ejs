@@ -135,10 +135,15 @@
       
     </div>
     
+    <!-- Reviews -->
     <div class="container">
     <h3>Why</h3>
-    
     <hr>
+      <% for (let i=0; i < reviews.length; i++) { %>
+        <% const review = reviews[i] %> 
+        <p><%= review.rating %></p>
+        <p><%= review.content %></p>
+      <% } %> 
     </div>
 
   </main>

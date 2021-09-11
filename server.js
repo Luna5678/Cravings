@@ -50,6 +50,7 @@ app.get('/', (req,res) => {
 });
 
 app.use('/restaurants', controllers.restaurant);
+app.use('/reviews', controllers.review);
 
 app.get('/*', (req, res) => {
   res.send('Uh oh error')
