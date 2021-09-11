@@ -141,6 +141,21 @@
     <h3>Why</h3>
     <hr>
     
+      <!-- Submit a Review Form -->
+      <h2>Write a review for <%= restaurant.name %> </h2>
+      <form action="">
+        <div class="slidecontainer">
+          <label for="myRange" class="form-label">Star Rating</label>
+          <input type="range" min="0" max="5" value="0" class="reviews-slider" step="1" id="myRange">
+        </div>
+
+        <div class="mb-3">
+          <textarea class="form-control" rows="3" placeholder="Tell us about your experience!"></textarea>
+        </div>
+
+      </form>
+      
+
       <!-- Review Cards -->
       <% for (let i=0; i < reviews.length; i++) { %>
         <% const review = reviews[i] %> 
@@ -168,7 +183,7 @@
                   <!-- Review stars -->
                   
                   <% for ( let idx=0; idx < 5; idx++) { %>
-                    <% if (review.rating> idx) { %>
+                    <% if (review.rating > idx) { %>
                       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#eb4d47" class="bi bi-heart-fill"
                         viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />

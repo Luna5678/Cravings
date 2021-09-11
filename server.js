@@ -1,4 +1,5 @@
 const express = require('express');
+const methodOverride = require('method-override');
 require('./config/db.connection');
 const app = express();
 const PORT = 4000;
@@ -34,6 +35,7 @@ app.use(
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
+app.use(methodOverride("_method"));
 
 // Custom middleware logger
 function logger(req,res,next) {
