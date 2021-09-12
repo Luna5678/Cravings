@@ -36,17 +36,19 @@
                   <% }) %>
           </p>
 
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <!-- View Menu Modal Trigger -->
+
+          <button type="button" class="btn rounded-pill view-menu-btn" data-bs-toggle="modal" data-bs-target="#menuModal">
             View Menu
           </button>
           
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <!-- View Menu Modal -->
+
+          <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h2 class="modal-title" id="exampleModalLabel">
+                  <h2 class="modal-title" id="menuModalLabel">
                     Menu
                   </h2>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -58,7 +60,7 @@
                   </h5>
                   <div class="container-fluid">
                     <div class="row align-items-start">
-                      <div class="col-lg-6">
+                      <div class="col-lg-6 text-center">
                         <h6>Appetizers</h6>
                         <p>
                           Lorem Ipsum....................00<br>
@@ -98,7 +100,7 @@
                   </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
@@ -137,33 +139,58 @@
     
     <!-- Reviews Section -->
 
-    <div class="container">
-    <h3>Why</h3>
-    <hr>
-    
-      <!-- Submit a Review Form -->
-      <h2>Write a review for <%= restaurant.name %> </h2>
-      <form action="/reviews" method="POST">
-        <div class="slidecontainer">
-          <label for="myRange" class="form-label">Star Rating</label>
-          <input name="rating" type="range" min="0" max="5" value="0" class="reviews-slider" step="1" id="myRange">
-        </div>
-
-        <div class="mb-3">
-          <textarea name="content" class="form-control" rows="3" placeholder="Tell us about your experience!"></textarea>
-          <p class="text-end"><small>Maximum 1000 characters.</small></p>
-        </div>
-
-        <input type="hidden" name="restaurant" value="<%= restaurant._id %>" />
-        <button type="submit" class="btn rounded-pill review-submit-btn">Submit</button>
-      </form>
+    <div class="container mt-3">
+      <h3>Why</h3>
+      <hr>
       
+      <!-- New Review Modal Trigger -->
+
+      <div class="text-center my-4">
+        <h4>Have you been here to satisfy your cravings?</h4>
+        <button type="button" class="btn rounded-pill review-submit-btn mt-2" data-bs-toggle="modal" data-bs-target="#reviewModal">
+          Submit a Review
+        </button>
+      </div>
+      
+      
+      <!-- New Review Modal Form -->
+
+      <div class="modal fade" id="reviewModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="reviewModalLabel">Write a review for <%= restaurant.name %> </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="/reviews" method="POST">
+                <div class="slidecontainer">
+                  <label for="myRange" class="form-label">Star Rating</label>
+                  <input name="rating" type="range" min="0" max="5" value="0" class="reviews-slider" step="1" id="myRange">
+                </div>
+              
+                <div class="mb-3">
+                  <textarea name="content" class="form-control" rows="5" placeholder="Tell us about your experience!"></textarea>
+                  <p class="text-end"><small>Maximum 1000 characters.</small></p>
+                </div>
+              
+                <input type="hidden" name="restaurant" value="<%= restaurant._id %>" />
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn rounded-pill review-submit-btn">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        
 
       <!-- Review Cards -->
       <% for (let i=0; i < reviews.length; i++) { %>
         <% const review = reviews[i] %> 
         
-        <div class="card my-3">
+        <div class="card mb-4">
           <div class="row g-0">
 
             <!-- Review Cards - Left -->
@@ -181,7 +208,7 @@
             <!-- Review Cards - Right -->
 
             <div class="col-md-9">
-              <div class="card-body">
+              <div class="mt-3">
 
                 <!-- Review stars -->
                 

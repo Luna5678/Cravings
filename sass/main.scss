@@ -36,7 +36,7 @@ main {
   width: 80%;
   max-width: 1200px;
   margin: auto;
-  background-color: $grey-color;
+  // background-color: $grey-color;
 }
 
 input {
@@ -143,6 +143,11 @@ a#restaurant-link {
   width: 125px;
   box-sizing: border-box;
   border: $yellow-color solid 5px;
+}
+
+.view-menu-btn {
+  background-color: $light-green-color;
+  color: white;
 }
 
 // SECTION Submit Review Form

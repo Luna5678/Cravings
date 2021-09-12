@@ -19,7 +19,6 @@ main {
   width: 80%;
   max-width: 1200px;
   margin: auto;
-  background-color: #eeeef1;
 }
 
 input {
@@ -117,6 +116,11 @@ a#restaurant-link {
   width: 125px;
   box-sizing: border-box;
   border: #fff5c2 solid 5px;
+}
+
+.view-menu-btn {
+  background-color: #54c981;
+  color: white;
 }
 
 .slidecontainer {
