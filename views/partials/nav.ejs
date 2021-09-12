@@ -12,9 +12,71 @@
 
     <div class="d-flex">
         <a href="/restaurants" class="nav-link me-5">Restaurants</a>
-        <a href="#" class="nav-link me-5">Sign Up</a>
-        <a href="#" class="nav-link me-5">Log In</a>
+
+        <a href="#" class="nav-link me-5" data-bs-toggle="modal" data-bs-target="#signUpModal">
+          Sign Up
+        </a>
+
+        <a href="#" class="nav-link me-5" data-bs-toggle="modal" data-bs-target="#logInModal">Log In</a>
     </div>
 
   </div>
 </nav>
+
+  <!-- Sign Up Form Modal -->
+
+  <div class="modal fade" id="signUpModal" aria-hidden="true" aria-labelledby="signUpModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signUpModalToggleLabel">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Join our community of food enthusiasts and cravers.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#logInModal" data-bs-toggle="modal"
+            data-bs-dismiss="modal">Log In Instead</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="logInModal" aria-hidden="true" aria-labelledby="logInModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="logInModalToggleLabel2">Welcome Back</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Log in to your account.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#signUpModal" data-bs-toggle="modal">Sign Up Instead</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <a class="btn btn-primary" data-bs-toggle="modal" href="#signUpModalToggleLabel" role="button">Open first modal</a> -->
+
+  <!-- <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div> -->
+  </div>
