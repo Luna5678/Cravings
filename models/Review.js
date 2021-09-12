@@ -11,6 +11,7 @@ const ReviewSchema = new mongoose.Schema(
     content: {
       type: String,
       required: [true, "Please provide a reason for your rating."],
+      maxLength: 1000
     },
     restaurant: {
       type: mongoose.Types.ObjectId,

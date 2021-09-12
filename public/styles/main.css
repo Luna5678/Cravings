@@ -156,4 +156,9 @@ a#restaurant-link {
   cursor: pointer;
 }
 
+.review-submit-btn {
+  background-color: #2a7a47;
+  color: white;
+}
+
 /*# sourceMappingURL=main.css.map */

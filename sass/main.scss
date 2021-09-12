@@ -183,3 +183,8 @@ a#restaurant-link {
   background-image: url("/images/heart-fill.svg");
   cursor: pointer;
 }
+
+.review-submit-btn {
+  background-color: $dark-green-color;
+  color: white;
+}
