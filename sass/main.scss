@@ -145,9 +145,16 @@ a#restaurant-link {
   border: $yellow-color solid 5px;
 }
 
-.view-menu-btn {
-  background-color: $light-green-color;
-  color: white;
+.text-link {
+  color: $light-green-color;
+}
+
+.menu-modal-header {
+  background-color: $yellow-color;
+}
+
+#reviewModalLabel {
+  color: $light-red-color;
 }
 
 // SECTION Submit Review Form
