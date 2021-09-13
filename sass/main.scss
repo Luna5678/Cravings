@@ -224,3 +224,10 @@ a#restaurant-link {
   background-color: $dark-green-color;
   color: white;
 }
+
+// SECTION Profiles
+.profile-avatar-img {
+  width: 200px;
+  box-sizing: border-box;
+  border: $yellow-color solid 5px;
+}

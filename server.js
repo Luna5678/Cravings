@@ -54,6 +54,7 @@ app.get('/', (req,res) => {
 app.use('/restaurants', controllers.restaurant);
 app.use('/reviews', controllers.review);
 app.use('/', controllers.auth);
+app.use('/profile', controllers.profile);
 
 app.get('/*', (req, res) => {
   res.send('Uh oh error')

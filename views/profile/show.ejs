@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', { page: "Profile" }) %>
+
+<body>
+  <%- include('../partials/nav') %>
+  <main>
+    <h1><%= user.username %>'s Profile</h1>
+    <img src="<%= user.avatar %> " alt="<%= user.username %> avatar image" class="img-fluid rounded-circle profile-avatar-img">
+    <p><%= user.bio %></p>
+
+    <h2>Reviews History</h2>
+    <hr />
+    <%= review.restaurant %>
+  </main>
+</body>
+</html>

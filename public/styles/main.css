@@ -195,4 +195,10 @@ a#restaurant-link {
   color: white;
 }
 
+.profile-avatar-img {
+  width: 200px;
+  box-sizing: border-box;
+  border: #fff5c2 solid 5px;
+}
+
 /*# sourceMappingURL=main.css.map */
