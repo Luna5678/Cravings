@@ -12,15 +12,6 @@ router.post('/', async function (req,res, next) {
     };
     return next();
   }
-  // Review.create(req.body, function (error, createdReview) {
-  //   if (error) {
-  //     console.log(error);
-  //     req.error=error;
-  //     return next();
-  //   }
-
-    
-  // })
 });
 
 module.exports = router;
