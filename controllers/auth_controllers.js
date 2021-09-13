@@ -7,6 +7,10 @@ router.get('/register', function (req,res,next) {
   return res.render('auth/register.ejs');
 })
 
+router.get('/login', function(req,res,next) {
+  return res.render('auth/login.ejs');
+})
+
 router.post('/register', async function (req,res) {
   try {
     if (req.body.password !== req.body.passwordTwo) {
@@ -40,6 +44,36 @@ router.post('/register', async function (req,res) {
     };
     return res.render('auth/register.ejs', context);
   }
+});
+
+router.post('/login', async function(req,res,next) {
+  try {
+    const foundUser = await User.findOne( { username: req.body.username });
+    if (!foundUser) {
+      const context = {
+        error: "This username and password combination does not exist.",
+      };
+      return res.render('auth/login.ejs', context);
+    };
+
+    const match = await bcrypt.compare(req.body.password, foundUser.password);
+    if (!match) {
+      const context = {
+        error: "This username and password combination does not exist.",
+      }
+      return res.render('auth/login.ejs', context);
+    };
+
+    req.session.currentUser = {
+      id: foundUser._id,
+      username: foundUser.username
+    };
+    return res.redirect('/restaurants');
+
+  } catch (error) {
+    console.log(error);
+    return res.send(error);
+  };
 });
 
 router.get('/logout', async function(req,res,next) {
