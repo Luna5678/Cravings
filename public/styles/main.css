@@ -172,4 +172,27 @@ a#restaurant-link {
   color: white;
 }
 
+.error-msg {
+  color: #ce1b12;
+}
+
+.register-left {
+  border: #fff5c2 3px solid;
+  box-shadow: 5px 5px 10px #fff5c2;
+  height: 600px;
+}
+
+.register-img-1 {
+  width: 18em;
+}
+
+.register-img-2 {
+  width: 18em;
+}
+
+.submit-btn {
+  background-color: #2a7a47;
+  color: white;
+}
+
 /*# sourceMappingURL=main.css.map */

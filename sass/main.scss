@@ -200,3 +200,27 @@ a#restaurant-link {
   background-color: $dark-green-color;
   color: white;
 }
+
+// SECTION Registration
+.error-msg {
+  color: $dark-red-color;
+}
+
+.register-left {
+  border: $yellow-color 3px solid;
+  box-shadow: 5px 5px 10px $yellow-color;
+  height: 600px;
+}
+
+.register-img-1 {
+  width: 18em;
+}
+
+.register-img-2 {
+  width: 18em;
+}
+
+.submit-btn {
+  background-color: $dark-green-color;
+  color: white;
+}
