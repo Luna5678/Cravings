@@ -9,14 +9,7 @@
     <img src="<%= profile.avatar %> " alt="<%= profile.username %> avatar image" class="img-fluid rounded-circle profile-avatar-img">
     <p><%= profile.bio %></p>
 
-    <% if (typeof user !== 'undefined') { %>
-      <% if (profile.id === user.id) { %>
-        <a href="#">Edit Profile</a>
-      <% } %> 
-    <% } %> 
-
     <h2>Reviews History</h2>
-    <h2><%= profile.id %></h2>
     <hr />
     <% for (let i = 0; i < reviews.length; i++) { %> 
       <% const review = reviews[i] %> 
@@ -24,6 +17,12 @@
       <div><%= review.rating %></div>
       <p><%= review.content %></p>
     <% } %> 
+
+    <% if (typeof user !=='undefined' ) { %>
+      <% if (profile.id===user.id) { %>
+        <a href="/<%= user.id %>/edit">Edit My Account</a>
+      <% } %>
+    <% } %>
   </main>
 </body>
 </html>

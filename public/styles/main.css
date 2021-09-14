@@ -199,6 +199,11 @@ a#restaurant-link {
   width: 200px;
   box-sizing: border-box;
   border: #fff5c2 solid 5px;
+  margin: auto;
+}
+
+.edit-input-field {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

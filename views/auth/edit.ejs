@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+<body>
+  <%- include('../partials/nav') %>
+  <main>
+    <h1>My Account Details</h1>
+
+    <h4 class="ms-5">Update Profile</h4>
+    <img src="<%= user.avatar %> " alt="Avatar Image" class="img-fluid rounded-circle mx-auto d-block profile-avatar-img mb-4">
+    
+    <div class="container">
+      
+      <!-- Update Profile Only Form -->
+      <% if (typeof error !=='undefined' ) { %>
+        <p class="error-msg">Error: <%= error %>
+        </p>
+        <% } %>
+
+      <form action="/profile/<%= user.id %>?_method=PUT" method="POST">
+      
+        <!-- Avatar Fields -->
+        <div class="row justify-content-center mb-3">
+          <div class="col-2">
+            <label for="avatarUrl">Avatar URL</label>
+          </div>
+          <div class="col-5">
+            <div class="input-field edit-input-field">
+              <input type="text" name="avatar" class="form-control" id="avatarUrl" value="<%= user.avatar %>">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Username Fields -->
+        <div class="row justify-content-center mb-3">
+          <div class="col-2">
+            <label for="username">Username</label>
+          </div>
+          <div class="col-5">
+            <div class="input-field edit-input-field">
+              <input type="text" name="username" class="form-control" id="username" value="<%= user.username %>">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Email Fields -->
+        <div class="row justify-content-center mb-3">
+          <div class="col-2">
+            <label for="email">Email</label>
+          </div>
+          <div class="col-5">
+            <div class="input-field edit-input-field">
+              <input type="text" name="email" class="form-control" id="email" value="<%= user.email %>">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bio Fields -->
+        <div class="row justify-content-center mb-3">
+          <div class="col-2">
+            <label for="bio">Bio</label>
+          </div>
+          <div class="col-5">
+            <div class="input-field edit-input-field">
+              <textarea class="form-control" name="bio" id="bio" value="<%= user.bio %>" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn rounded-pill submit-btn">Update Profile</button>
+        </form>
+
+        <h4 class="ms-5">Change Password</h4>
+        <form action="/pw/<%= user.id %>?_method=PUT" method="POST">
+        <!-- Password Fields -->
+        <div class="row justify-content-center mb-3">
+          <div class="col-2">
+            <label for="passwordOne">Password</label>
+          </div>
+          <div class="col-5">
+            <div class="input-field edit-input-field">
+              <input type="password" name="password" class="form-control" id="passwordOne" placeholder="********" >
+            </div>
+          </div>
+        </div>
+        
+        <!-- Confirm Password Fields -->
+
+          <div class="row justify-content-center mb-3">
+            <div class="col-2">
+              <label for="passwordTwo">Confirm Password</label>
+            </div>
+            <div class="col-5">
+              <div class="input-field edit-input-field">
+                <input type="password" name="passwordTwo" class="form-control" id="passwordTwo" placeholder="********" >
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn rounded-pill submit-btn">Update Password</button>
+        </form>
+        
+
+      
+
+    </div>
+
+  </main>
+</body>
+</html>
