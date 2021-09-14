@@ -96,10 +96,15 @@
             <!-- Review Cards - Left -->
 
             <div class="col-md-3 text-center pt-3">
+              <% if (review.user !== null) { %> 
               <a href="/profile/<%= review.user.id %>">
                 <img src="<%= review.user.avatar %> " class="img-fluid rounded-circle avatar-img" alt="Profile Avatar">
                 <h5><%= review.user.username %></h5>
               </a>
+              <% } else { %>
+                <img src="https://www.chocolatebayou.org/wp-content/uploads/No-Image-Person-1536x1536.jpeg" class="img-fluid rounded-circle avatar-img" alt="Profile Avatar">
+                <h5 class="grey-text">User</h5>
+              <% } %> 
               <p class="fst-italic">
                 <%= (review.createdAt).toLocaleDateString('en-US') %>
               </p>
