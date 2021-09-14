@@ -96,9 +96,9 @@
             <!-- Review Cards - Left -->
 
             <div class="col-md-3 text-center pt-3">
-              <a href="/profile/<%= review.user %>">
-                <img src="" class="img-fluid rounded-circle avatar-img" alt="Profile Avatar">
-                <h5><%= review.user %></h5>
+              <a href="/profile/<%= review.user.id %>">
+                <img src="<%= review.user.avatar %> " class="img-fluid rounded-circle avatar-img" alt="Profile Avatar">
+                <h5><%= review.user.username %></h5>
               </a>
               <p class="fst-italic">
                 <%= (review.createdAt).toLocaleDateString('en-US') %>
