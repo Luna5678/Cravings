@@ -7,8 +7,8 @@ router.get('/:id', async function (req,res,next) {
     const foundUser = await User.findById( req.params.id );
     const foundReviews = await Review.find({ user: req.params.id} ).sort('-createdAt')
     const context = {
-      user: foundUser,
-      review: foundReviews
+      profile: foundUser,
+      reviews: foundReviews
     };
     return res.render('profile/show.ejs', context)
   } catch (error) {
