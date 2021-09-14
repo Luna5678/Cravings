@@ -14,4 +14,15 @@ router.post('/', async function (req,res, next) {
   }
 });
 
+router.delete('/:id', async function(req,res,next) {
+  try {
+    await Review.findByIdAndDelete(req.params.id);
+    return res.redirect(`/profile/${req.session.currentUser.id}`);
+  } catch (error) {
+    console.log(error);
+    req.error = error;
+    return next();
+  }
+})
+
 module.exports = router;
