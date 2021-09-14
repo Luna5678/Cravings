@@ -101,12 +101,51 @@
               </div>
             </div>
           </div>
-          <div class="text-center">
+          <div class="text-center mb-5">
             <button type="submit" class="btn rounded-pill submit-btn">Update Password</button>
           </div>
         </form>
-        
 
+        <div class="text-center mb-5">
+          <a href="/restaurants" class="btn rounded-pill submit-btn">Cancel Changes</a>
+        </div>
+        
+          <div class="text-center mb-5">
+            <button type="button" class="btn rounded-pill btn-primary" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">
+              Delete Account
+            </button>
+
+
+
+          </div>
+
+          <div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="deleteAccountModalLabel">Are you sure?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+
+                  <div class="text-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+
+                    <form action="/<%= user.id %>?_method=DELETE" method="POST">
+                      <button type="submit" class="btn rounded-pill">Delete Account</button>
+                    </form>
+                  </div>
+                  
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        
+        
       
 
     </div>

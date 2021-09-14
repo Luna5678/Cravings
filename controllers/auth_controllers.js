@@ -43,7 +43,7 @@ router.post('/register', async function (req,res) {
 
     const createdUser = await User.create(req.body);
 
-    return res.redirect('/');
+    return res.redirect('/login');
 
   } catch (error) {
     const context = {
@@ -186,5 +186,20 @@ router.get('/logout', async function(req,res,next) {
     return res.send(error);
   }
 })
+
+
+// Delete Account
+
+router.delete('/:id', async function (req, res, next) {
+    try {
+        await User.findByIdAndDelete(req.session.currentUser.id);
+        await req.session.destroy();
+        return res.redirect('/register');
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+});
 
 module.exports = router;
