@@ -5,10 +5,21 @@
 <body>
   <%- include('../partials/nav') %>
   <main>
-    <h1><%= profile.username %>'s Profile</h1>
+    <div class="text-center mt-3">
+      <h1><%= profile.username %>'s Profile</h1>
     <img src="<%= profile.avatar %> " alt="<%= profile.username %> avatar image" class="img-fluid rounded-circle profile-avatar-img mb-4">
     <h2>About me:</h2>
     <p><%= profile.bio %></p>
+    </div>
+    
+
+    <% if (typeof user !=='undefined' ) { %>
+      <% if (profile.id===user.id) { %>
+        <div class="text-end">
+          <a href="/<%= user.id %>/edit" class="btn rounded-pill text-end warning-button">Edit My Profile or Account</a>
+        </div>
+        <% } %>
+          <% } %>
 
     <h2>Reviews History</h2>
     <hr />
@@ -38,11 +49,7 @@
       <p class="mb-2"><%= review.content %></p>
     <% } %> 
 
-    <% if (typeof user !=='undefined' ) { %>
-      <% if (profile.id===user.id) { %>
-        <a href="/<%= user.id %>/edit">Edit My Account</a>
-      <% } %>
-    <% } %>
+    
   </main>
 </body>
 </html>

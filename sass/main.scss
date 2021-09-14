@@ -77,6 +77,11 @@ a {
   color: grey;
 }
 
+.warning-button {
+  background-color: $light-red-color;
+  color: white;
+}
+
 // SECTION Navbar
 .navbar {
   background-color: rgba($color: #fff, $alpha: 0.8);
