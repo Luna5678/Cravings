@@ -15,7 +15,7 @@
       
       <!-- Update Profile Only Form -->
       <% if (typeof error !=='undefined' ) { %>
-        <p class="error-msg">Error: <%= error %>
+        <p class="error-msg text-center">Error: <%= error %>
         </p>
         <% } %>
 
@@ -68,8 +68,12 @@
             </div>
           </div>
         </div>
-        <button type="submit" class="btn rounded-pill submit-btn">Update Profile</button>
+        <div class="text-center">
+          <button type="submit" class="btn rounded-pill submit-btn">Update Profile</button>
+        </div>
         </form>
+
+        <!-- CHANGE PASSWORD FORM -->
 
         <h4 class="ms-5">Change Password</h4>
         <form action="/pw/<%= user.id %>?_method=PUT" method="POST">
@@ -97,7 +101,9 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn rounded-pill submit-btn">Update Password</button>
+          <div class="text-center">
+            <button type="submit" class="btn rounded-pill submit-btn">Update Password</button>
+          </div>
         </form>
         
 

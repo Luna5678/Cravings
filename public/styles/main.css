@@ -46,6 +46,13 @@ a {
   color: #1f1f1f;
 }
 
+.error-msg {
+  border: #ce1b12 solid 3px;
+  color: #ce1b12;
+  height: 50px;
+  padding-top: 10px;
+}
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -170,10 +177,6 @@ a#restaurant-link {
 .review-submit-btn {
   background-color: #2a7a47;
   color: white;
-}
-
-.error-msg {
-  color: #ce1b12;
 }
 
 .register-left {

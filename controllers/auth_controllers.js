@@ -129,17 +129,6 @@ router.put('/profile/:id', async function(req,res,next) {
       return res.render('auth/edit.ejs', context);
     };
 
-    // if (req.body.password !== req.body.passwordTwo) {
-    //   const context = {
-    //     error: "Passwords do not match.",
-    //   };
-    //   return res.render('auth/edit.ejs', context);
-    // };
-
-    // const salt = await bcrypt.genSalt(10);
-    // const hash = await bcrypt.hash(req.body.password, salt);
-    // req.body.password = hash;
-
     const updatedUser = await User.findByIdAndUpdate(
       req.session.currentUser.id, 
       { $set: {avatar: req.body.avatar,

@@ -65,6 +65,13 @@ a {
   color: $black-color;
 }
 
+.error-msg {
+  border: $dark-red-color solid 3px;
+  color: $dark-red-color;
+  height: 50px;
+  padding-top: 10px;
+}
+
 // SECTION Navbar
 .navbar {
   background-color: rgba($color: #fff, $alpha: 0.8);
@@ -202,9 +209,6 @@ a#restaurant-link {
 }
 
 // SECTION Registration
-.error-msg {
-  color: $dark-red-color;
-}
 
 .register-left {
   border: $yellow-color 3px solid;
