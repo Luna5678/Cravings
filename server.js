@@ -68,7 +68,10 @@ app.use('/reviews', authRequired, controllers.review);
 app.use('/profile', controllers.profile);
 
 app.get('/*', (req, res) => {
-  res.send('Uh oh error')
+  const context = {
+    error: req.error,
+  };
+  res.render('404', context);
 });
 
 
