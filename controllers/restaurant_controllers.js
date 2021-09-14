@@ -37,11 +37,11 @@ router.get('/:id', async(req,res,next) => {
 router.get('/search', function (req,res,next) {
   const q = req.query.q;
 
-  Restaurant.find({
-      categories: {
-        $regex: new RegExp(q), $options: 'i'
-      },
-    }, function (err, data) {
+  Restaurant.find(
+    { $or: [ {categories: {$regex: new RegExp(q), $options: 'i'}}, 
+      {name: { $regex: new RegExp(q), $options: 'i'}}
+    ]}, 
+    function (err, data) {
       const context = {
         restaurants: data
       }
