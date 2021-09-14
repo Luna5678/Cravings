@@ -5,12 +5,10 @@ const { User, Review, Restaurant } = require('../models');
 router.get('/:id', async function (req,res,next) {
   try {
     const foundUser = await User.findById( req.params.id );
-    const foundReviews = await Review.find({ user: req.params.id} ).sort('-createdAt');
-    const allRestaurants = await Restaurant.find({})
+    const foundReviews = await Review.find({ user: req.params.id} ).populate('restaurant').sort('-createdAt');
     const context = {
       profile: foundUser,
       reviews: foundReviews,
-      restaurants: allRestaurants,
     };
     return res.render('profile/show.ejs', context)
   } catch (error) {
