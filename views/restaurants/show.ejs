@@ -96,9 +96,9 @@
             <!-- Review Cards - Left -->
 
             <div class="col-md-3 text-center pt-3">
-              <a href="#">
-                <img src="https://www.chocolatebayou.org/wp-content/uploads/No-Image-Person-1536x1536.jpeg" class="img-fluid rounded-circle avatar-img" alt="Profile Avatar">
-              <h5>Johnnydoe</h5>
+              <a href="/profile/<%= review.user %>">
+                <img src="" class="img-fluid rounded-circle avatar-img" alt="Profile Avatar">
+                <h5><%= review.user %></h5>
               </a>
               <p class="fst-italic">
                 <%= (review.createdAt).toLocaleDateString('en-US') %>
@@ -239,6 +239,11 @@
               </div>
     
               <input type="hidden" name="restaurant" value="<%= restaurant._id %>" />
+
+              <% if (typeof user !== 'undefined') { %>
+                <input type="hidden" name="user" value="<%= user.id%>" />
+              <% } %> 
+
               <div class="text-center">
                 <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
                 <button type="submit" class="btn rounded-pill review-submit-btn">Submit</button>

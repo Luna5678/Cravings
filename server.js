@@ -32,6 +32,11 @@ app.use(
   })
 );
 
+app.use((req,res,next) => {
+  res.locals.user = req.session.currentUser;
+  return next();
+})
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
@@ -45,15 +50,21 @@ function logger(req,res,next) {
 };
 app.use(logger);
 
+const authRequired = (req,res,next) => {
+  if (!req.session.currentUser) {
+    return res.redirect('/login');
+  };
+  next();
+}
 
 // SECTION Routes
 app.get('/', (req,res) => {
   res.render('home');
 });
 
-app.use('/restaurants', controllers.restaurant);
-app.use('/reviews', controllers.review);
 app.use('/', controllers.auth);
+app.use('/restaurants', controllers.restaurant);
+app.use('/reviews', authRequired, controllers.review);
 app.use('/profile', controllers.profile);
 
 app.get('/*', (req, res) => {

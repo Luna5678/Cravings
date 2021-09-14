@@ -13,11 +13,20 @@
     <div class="d-flex">
         <a href="/restaurants" class="nav-link me-5">Restaurants</a>
 
-        <a href="/register" class="nav-link me-5">
-          Sign Up
-        </a>
+        <% if (user) { %>
+          <a href="/" class="nav-link me-5">
+            My Profile
+          </a>
 
-        <a href="/login" class="nav-link me-5">Log In</a>
+          <a href="/logout" class="nav-link me-5">Log Out</a>
+        <% } else { %> 
+          <a href="/register" class="nav-link me-5">
+            Sign Up
+          </a>
+          
+          <a href="/login" class="nav-link me-5">Log In</a>
+        <% } %> 
+        
     </div>
 
   </div>

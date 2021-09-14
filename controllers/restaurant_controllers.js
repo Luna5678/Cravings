@@ -1,7 +1,7 @@
 const { response } = require('express');
 const express = require('express');
 const router = express.Router();
-const { Restaurant, Review } = require('../models');
+const { Restaurant, Review, User } = require('../models');
 
 router.get('/', async (req,res,next) => {
   try {
@@ -20,7 +20,7 @@ router.get('/', async (req,res,next) => {
 router.get('/:id', async(req,res,next) => {
   try {
     const foundRestaurant = await Restaurant.findById(req.params.id);
-    const foundReviews = await Review.find({ restaurant: req.params.id} ).sort('-createdAt')
+    const foundReviews = await Review.find({ restaurant: req.params.id}).sort('-createdAt');
     const context = {
       restaurant: foundRestaurant,
       reviews: foundReviews,
