@@ -7,8 +7,13 @@
     <main>
       <img width="300px" src="https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif?cid=ecf05e47pwsly38snmbzt7abo9hdmqfoacm7a4ksuknl3hgk&rid=giphy.gif&ct=g" alt="Page not found">
       <p>
-        Sorry, something went wrong! Let's get you back on track to satisying your cravings.<br />
+        Sorry, something went wrong! Let's get you back on track.<br />
         <a href="/restaurants">Return to restaurants.</a>
+      </p>
+      <p>
+        <% if (error) { %>
+          <% console.log(error.message) %>
+          <% } %>
       </p>
     </main>
   </body>
