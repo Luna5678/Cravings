@@ -39,7 +39,7 @@ router.get('/search', function (req,res,next) {
 
   Restaurant.find({
       categories: {
-        $regex: new RegExp(q)
+        $regex: new RegExp(q), $options: 'i'
       },
     }, function (err, data) {
       const context = {
