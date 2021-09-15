@@ -65,10 +65,12 @@ a {
   text-decoration: none;
 }
 
-.error-msg {
+.error-container {
   border: $dark-red-color solid 3px;
+}
+
+.error-msg {
   color: $dark-red-color;
-  height: 50px;
   padding-top: 10px;
   text-align: center;
 }
@@ -311,16 +313,11 @@ a#restaurant-link {
 
 // SECTION Submit Review Form
 
-.review-submit-btn {
-  background-color: $dark-green-color;
-  color: white;
-}
-
 // SECTION Registration
 
 .register-left {
   border: $yellow-color 3px solid;
-  box-shadow: 5px 5px 10px $yellow-color;
+  box-shadow: 0 0 10px 5px $yellow-color;
   height: 600px;
 }
 
@@ -330,11 +327,6 @@ a#restaurant-link {
 
 .register-img-2 {
   width: 18em;
-}
-
-.submit-btn {
-  background-color: $dark-green-color;
-  color: white;
 }
 
 // SECTION Profiles

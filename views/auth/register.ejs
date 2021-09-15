@@ -9,15 +9,20 @@
   <main>
     <div class="container">
       <div class="row">
+
+        <!-- Registration Form Left Side -->
+
         <div class="col-lg-5 align-self-center register-left">
             <div class="row align-items-center"> 
-              <div class="col">
-                <h1 class="modal-title" id="signUpModalToggleLabel">Create an Account</h1>
+              <div class="col align-self-center text-center">
+                <h1>Create an Account</h1>
 
               <h5 class="mb-3">Join our community of food enthusiasts and cravers.</h5>
 
               <% if (typeof error !== 'undefined') { %>
-                <p class="error-msg">Error: <%= error %></p>
+                <div class="error-container my-3">
+                  <p class="error-msg">Error: <%= error %></p>
+                </div>
               <% } %> 
 
               <form action="/register" method="POST">
@@ -33,7 +38,7 @@
                 <div class="mb-3">
                   <input type="password" class="form-control" name="passwordTwo" placeholder="Confirm Password">
                 </div>
-                <button type="submit" class="btn mb-4 rounded-pill submit-btn">Sign Up</button>
+                <button type="submit" class="button green-button my-3">Sign Up</button>
               </form>
 
               <a href="/login" class="text-link">
@@ -45,6 +50,7 @@
           
         </div>
           
+        <!-- Registration Form Right Side -->
 
         <div class="col-lg-7">
           <div class="container">

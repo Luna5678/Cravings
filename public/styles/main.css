@@ -47,10 +47,12 @@ a {
   text-decoration: none;
 }
 
-.error-msg {
+.error-container {
   border: #ce1b12 solid 3px;
+}
+
+.error-msg {
   color: #ce1b12;
-  height: 50px;
   padding-top: 10px;
   text-align: center;
 }
@@ -278,14 +280,9 @@ a#restaurant-link {
   background-color: rgba(255, 245, 194, 0.5);
 }
 
-.review-submit-btn {
-  background-color: #2a7a47;
-  color: white;
-}
-
 .register-left {
   border: #fff5c2 3px solid;
-  box-shadow: 5px 5px 10px #fff5c2;
+  box-shadow: 0 0 10px 5px #fff5c2;
   height: 600px;
 }
 
@@ -295,11 +292,6 @@ a#restaurant-link {
 
 .register-img-2 {
   width: 18em;
-}
-
-.submit-btn {
-  background-color: #2a7a47;
-  color: white;
 }
 
 .profile-avatar-img {
