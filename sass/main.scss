@@ -219,8 +219,13 @@ a#restaurant-link {
   }
 }
 
-.restaurant-card-body {
-  background-color: $yellow-color;
+.restaurant-card {
+  border: 3px solid $yellow-color !important;
+  border-radius: 2px;
+}
+
+.restaurant-card-individual:hover {
+  box-shadow: 0 0 3px 7px $yellow-color;
 }
 
 .search-bar-index {
@@ -231,6 +236,11 @@ a#restaurant-link {
 .cards-link {
   color: $black-color;
   text-decoration: none;
+}
+
+.restaurant-card-img {
+  min-width: 100%;
+  min-height: 100%;
 }
 
 // SECTION Restaurant Show Page
