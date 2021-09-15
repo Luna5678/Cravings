@@ -43,7 +43,7 @@ header img {
 }
 
 a {
-  color: #1f1f1f;
+  text-decoration: none;
 }
 
 .error-msg {
@@ -60,6 +60,26 @@ a {
 
 .warning-button {
   background-color: #eb4d47;
+  color: white;
+}
+
+.link-animation {
+  display: inline;
+  background: linear-gradient(to bottom, #54c981 0%, #54c981 100%) !important;
+  background-position: 0 100% !important;
+  background-repeat: repeat-x !important;
+  background-size: 4px 4px !important;
+  color: #1f1f1f !important;
+  text-decoration: none !important;
+  transition: background-size 0.5s !important;
+}
+
+.link-animation:hover {
+  background-size: 4px 50px !important;
+  color: white !important;
+}
+
+.bi-search:hover {
   color: white;
 }
 
@@ -133,10 +153,6 @@ a#restaurant-link {
   width: 125px;
   box-sizing: border-box;
   border: #fff5c2 solid 5px;
-}
-
-.text-link {
-  color: #54c981;
 }
 
 .menu-modal-header {
