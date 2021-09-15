@@ -194,13 +194,16 @@ a#restaurant-link {
   border-radius: 2px;
 }
 
+.restaurant-card-individual {
+  transition: 0.3s;
+}
+
 .restaurant-card-individual:hover {
   box-shadow: 0 0 3px 7px #fff5c2;
 }
 
 .search-bar-index {
-  max-width: 700px;
-  align-self: center;
+  max-width: 500px;
 }
 
 .cards-link {
