@@ -274,6 +274,10 @@ a#restaurant-link {
   text-decoration: underline;
 }
 
+.heading-backgound {
+  background-color: rgba(255, 245, 194, 0.5);
+}
+
 .review-submit-btn {
   background-color: #2a7a47;
   color: white;
