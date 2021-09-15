@@ -84,7 +84,7 @@ a {
   box-sizing: border-box;
   border-width: 2px;
   border-style: solid;
-  border-radius: 3px;
+  border-radius: 2px;
   cursor: pointer;
   padding: 5px 15px;
   color: white;
@@ -95,7 +95,7 @@ a {
 }
 
 .nav-container {
-  width: 80%;
+  width: 95%;
 }
 
 .navbar {
@@ -122,8 +122,24 @@ a {
   color: #eb4d47;
 }
 
+.nav-link-animation {
+  padding-top: 10px;
+  background: linear-gradient(to bottom, #eb4d47 0%, #eb4d47 100%) !important;
+  background-position: 0 100% !important;
+  background-repeat: repeat-x !important;
+  background-size: 4px 4px !important;
+  color: #1f1f1f !important;
+  text-decoration: none !important;
+  transition: background-size 0.5s !important;
+}
+
+.nav-link-animation:hover {
+  background-size: 4px 50px !important;
+  color: white !important;
+}
+
 .home-search {
-  width: 70%;
+  max-width: 400px;
 }
 
 .home-img-1 {
@@ -134,6 +150,31 @@ a {
   width: 350px;
 }
 
+.about-section {
+  background-image: linear-gradient(180deg, #fff5c2, white);
+}
+
+.sliding-background-container {
+  overflow: hidden;
+  height: 60vh;
+}
+
+.sliding-background-1 {
+  background: url("/images/home-collage-1.png") top repeat-y;
+  background-size: contain;
+  height: 5076px;
+  float: left;
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -1692px, 0);
+  }
+}
 a#restaurant-link {
   color: #1f1f1f;
   text-decoration: none !important;

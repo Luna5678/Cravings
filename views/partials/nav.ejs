@@ -11,20 +11,22 @@
     </button>
 
     <div class="d-flex">
-        <a href="/restaurants" class="me-5 button nav-button">Restaurants</a>
+        <a href="/restaurants" class="me-5 nav-link-animation">Restaurants</a>
+
+        <a href="/" class="me-5 nav-link-animation">About</a>
 
         <% if (user) { %>
-          <a href="/profile/<%= user.id %> " class="me-5 button nav-button">
+          <a href="/profile/<%= user.id %> " class="me-5 nav-link-animation">
             My Profile
           </a>
 
-          <a href="/logout" class="me-5 button nav-button">Log Out</a>
-        <% } else { %> 
-          <a href="/register" class="me-5 button nav-button">
-            Sign Up
-          </a>
-          
-          <a href="/login" class="button nav-button">Log In</a>
+          <a href="/logout" class="me-5 nav-link-animation">Log Out</a>
+          <% } else { %> 
+            <a href="/login" class="me-5 nav-link-animation">Log In</a>
+
+            <a href="/register" class="button nav-button">
+              Sign Up
+            </a>
         <% } %> 
         
     </div>
