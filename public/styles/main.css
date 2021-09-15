@@ -258,48 +258,20 @@ a#restaurant-link {
 }
 
 .menu-modal-header {
-  background-color: #fff5c2;
+  background-color: #f58129;
+  border: none;
+}
+.menu-modal-header h2 {
+  color: white;
 }
 
 #reviewModalLabel {
   color: #eb4d47;
 }
 
-.slidecontainer {
-  width: 50%;
-}
-
-.reviews-slider {
-  width: 100%;
-  height: 25px;
-  border-radius: 5px;
-  background: #eeeef1;
-  outline: none;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-}
-
-.reviews-slider:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.reviews-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border: 0;
-  background-image: url("/images/heart-fill.svg");
-  cursor: pointer;
-}
-
-.reviews-slider::-moz-range-thumb {
-  width: 23px;
-  height: 25px;
-  border: 0;
-  background-image: url("/images/heart-fill.svg");
-  cursor: pointer;
+.green-text {
+  color: #54c981;
+  text-decoration: underline;
 }
 
 .review-submit-btn {
