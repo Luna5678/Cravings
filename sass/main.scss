@@ -112,6 +112,34 @@ a {
   outline: 0;
 }
 
+.green-button {
+  border-color: $dark-green-color;
+  color: white;
+  background-image: linear-gradient(45deg, white 50%, $dark-green-color 50%);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 500px;
+  transition: background 0.5s ease-in-out;
+}
+.green-button:hover {
+  background-position: 0;
+  color: $dark-green-color;
+}
+
+.grey-button {
+  border-color: #b8b8b8;
+  color: white;
+  background-image: linear-gradient(45deg, white 50%, #b8b8b8 50%);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 500px;
+  transition: background 0.5s ease-in-out;
+}
+.grey-button:hover {
+  background-position: 0;
+  color: #b8b8b8;
+}
+
 // SECTION Navbar
 .nav-container {
   width: 95%;
@@ -133,7 +161,8 @@ a {
   color: white;
   background-image: linear-gradient(45deg, white 50%, $light-red-color 50%);
   background-position: 100%;
-  background-size: 400%;
+  background-repeat: no-repeat;
+  background-size: 500px;
   transition: background 0.5s ease-in-out;
 }
 .nav-button:hover {
