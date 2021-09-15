@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand ms-5" href="/">
+  <div class="container-fluid nav-container">
+    <a class="navbar-brand" href="/">
       <img src="/images/logo.svg" alt="Brand logo" width="40" height="40" class="d-inline-block" />
       <span id="logo">Cravings</span>
     </a>
@@ -11,20 +11,20 @@
     </button>
 
     <div class="d-flex">
-        <a href="/restaurants" class="nav-link me-5">Restaurants</a>
+        <a href="/restaurants" class="me-5 button nav-button">Restaurants</a>
 
         <% if (user) { %>
-          <a href="/profile/<%= user.id %> " class="nav-link me-5">
+          <a href="/profile/<%= user.id %> " class="me-5 button nav-button">
             My Profile
           </a>
 
-          <a href="/logout" class="nav-link me-5">Log Out</a>
+          <a href="/logout" class="me-5 button nav-button">Log Out</a>
         <% } else { %> 
-          <a href="/register" class="nav-link me-5">
+          <a href="/register" class="me-5 button nav-button">
             Sign Up
           </a>
           
-          <a href="/login" class="nav-link me-5">Log In</a>
+          <a href="/login" class="button nav-button">Log In</a>
         <% } %> 
         
     </div>
