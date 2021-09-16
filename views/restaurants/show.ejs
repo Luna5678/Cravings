@@ -110,7 +110,7 @@
             <div class="col-md-3 text-center pt-3">
               <% if (review.user !== null) { %> 
               <a href="/profile/<%= review.user.id %>">
-                <img src="<%= review.user.avatar %> " class="img-fluid rounded-circle avatar-img" alt="Profile Avatar">
+                <img src="<%= review.user.avatar %> " class="img-fluid rounded-circle avatar-thumbnail mb-4">
                 <div><h5 class="link-animation"><%= review.user.username %></h5></div>
               </a>
               <% } else { %>

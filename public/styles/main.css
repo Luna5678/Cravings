@@ -295,6 +295,16 @@ a#restaurant-link {
   background-color: rgba(255, 245, 194, 0.5);
 }
 
+.avatar-thumbnail {
+  vertical-align: middle;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: #fff5c2 solid 5px;
+  margin: auto;
+}
+
 .login-form-left {
   border: #fff5c2 3px solid;
   box-shadow: 0 0 10px 5px #fff5c2;
