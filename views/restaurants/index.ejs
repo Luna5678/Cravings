@@ -45,7 +45,7 @@
                       <%= restaurant.name %>
                     </h3>
                     <div class="row">
-                      <div class="col">
+                      <div class="col-4">
                         <% const categoryArray=restaurant.categories %>
                           <% categoryArray.forEach(element=> { %>
                             <p class="card-text">#<%= element %>
@@ -53,7 +53,7 @@
                             <% }) %>
                       </div>
           
-                      <div class="col lh-1">
+                      <div class="col-8 lh-1">
                         <p><small>Sunday: <%= restaurant.hours[0] %></small></p>
                         <p><small>Monday: <%= restaurant.hours[1] %></small></p>
                         <p><small>Tuesday: <%= restaurant.hours[2] %></small></p>
