@@ -247,6 +247,19 @@ a {
   }
 }
 
+.contact-heading {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.contact-icon {
+  transition: 0.3s;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+}
+
 // SECTION Restaurant Index Page
 
 a#restaurant-link {

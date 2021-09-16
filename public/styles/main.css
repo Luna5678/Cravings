@@ -224,6 +224,19 @@ a {
     transform: translate3d(0, -1692px, 0);
   }
 }
+.contact-heading {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.contact-icon {
+  transition: 0.3s;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+}
+
 a#restaurant-link {
   color: #1f1f1f;
   text-decoration: none !important;
