@@ -18,16 +18,22 @@
       </a>
     </div>
 
-    <div class="text-center mt-4">
+    <!-- <div class="text-center mt-4">
       <h1>My Account Details</h1>
     </div>
 
     <div class="text-center mt-4 mb-3">
       <h4>Update Profile</h4>
     </div>
-
-    <img src="<%= user.avatar %> " alt="Avatar Image" class="img-fluid rounded-circle mx-auto d-block profile-avatar-img mb-4">
     
+    <img src="<%= user.avatar %> " alt="Avatar Image" class="img-fluid rounded-circle profile-avatar mb-4"> -->
+
+    <div class="text-center mt-4">
+      <h1 class="mb-5">My Account Details</h1>
+      <h4 class="mb-3">Update Profile</h4>
+      <img src="<%= user.avatar %> " alt="Avatar Image" class="img-fluid rounded-circle profile-avatar mb-3">
+    </div>
+
     <div class="container">
       
       <!-- Update Profile Only Form -->
@@ -85,8 +91,10 @@
             </div>
           </div>
         </div>
-        <div class="text-center">
-          <button type="submit" class="btn rounded-pill submit-btn">Submit</button>
+
+        <!-- Submit Profile Updates -->
+        <div class="text-center my-4">
+          <button type="submit" class="btn button green-button">Update Profile</button>
         </div>
         </form>
 
@@ -121,17 +129,17 @@
               </div>
             </div>
           </div>
-          <div class="text-center mb-5">
-            <button type="submit" class="btn rounded-pill submit-btn">Submit</button>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn button green-button mb-5">Update Password</button>
           </div>
         </form>
 
         <div class="text-center mb-5">
-          <a href="/restaurants" class="btn rounded-pill submit-btn">Cancel Changes</a>
+          <a href="/restaurants" class="btn button grey-button">Cancel All Changes</a>
         </div>
         
           <div class="text-center mb-5">
-            <button type="button" class="btn rounded-pill btn-primary" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">
+            <button type="button" class="btn button red-button" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">
               Delete Account
             </button>
 
