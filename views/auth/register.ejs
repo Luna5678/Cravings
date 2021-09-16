@@ -7,65 +7,59 @@
   <%- include('../partials/nav') %>
 
   <main>
-    <div class="container">
-      <div class="row">
+    <div class="container mt-3 px-4">
+      <div class="row gx-5">
 
         <!-- Registration Form Left Side -->
 
-        <div class="col-lg-5 align-self-center register-left">
-            <div class="row align-items-center"> 
-              <div class="col align-self-center text-center">
-                <h1>Create an Account</h1>
+        <div class="col-lg-5 login-form-left">
+          <div class="my-5 text-center"> 
+            <h1 class="mb-4">Create an Account</h1>
+            <h5 class="mb-4">Join our community of food enthusiasts and cravers.</h5>
 
-              <h5 class="mb-3">Join our community of food enthusiasts and cravers.</h5>
-
-              <% if (typeof error !== 'undefined') { %>
-                <div class="error-container my-3">
-                  <p class="error-msg">Error: <%= error %></p>
-                </div>
-              <% } %> 
-
-              <form action="/register" method="POST">
-                <div class="mb-3">
-                  <input type="text" class="form-control" name="username" placeholder="Username">
-                </div>
-                <div class="mb-3">
-                  <input type="email" class="form-control" name="email" placeholder="email@example.com">
-                </div>
-                <div class="mb-3">
-                  <input type="password" class="form-control" name="password" placeholder="Password">
-                </div>
-                <div class="mb-3">
-                  <input type="password" class="form-control" name="passwordTwo" placeholder="Confirm Password">
-                </div>
-                <button type="submit" class="button green-button my-3">Sign Up</button>
-              </form>
-
-              <a href="/login" class="text-link">
-                <p class="link-animation">Already have an account? Log in!</p>
-              </a>
+            <% if (typeof error !== 'undefined') { %>
+              <div class="error-container my-3">
+                <p class="error-msg">Error: <%= error %></p>
               </div>
-              
-            </div>
-          
+            <% } %> 
+
+            <form action="/register" method="POST">
+              <div class="mb-3">
+                <input type="text" class="form-control" name="username" placeholder="Username">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" name="email" placeholder="email@example.com">
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" name="passwordTwo" placeholder="Confirm Password">
+              </div>
+              <button type="submit" class="button green-button my-3">Sign Up</button>
+            </form>
+
+            <a href="/login" class="text-link">
+              <p class="link-animation">Already have an account? Log in!</p>
+            </a>
+          </div>
         </div>
           
         <!-- Registration Form Right Side -->
 
         <div class="col-lg-7">
-          <div class="container">
-            <div class="row">
-              <div class="col align-self-center">
-                <img src="images/register-2.jpg" alt="Lamb rack" class="register-img-2 rounded float-start">
-              </div>
-              <div class="col align-self-start">
-                <img src="images/register-1.jpg" alt="Sandwiches and fries" class="register-img-1 rounded float-end mt-3">
-                <img src="images/register-3.jpg" alt="Creme brulee" class="mt-3 register-img-1 rounded float-end">
-              </div>
+          <div class="row">
+            <div class="col collage-col">
+              <img src="/images/register-1.png" alt="family eating ice cream" class="login-img">
+              <img src="/images/register-2.png" alt="steak">
+            </div>
+            <div class="col collage-col">
+              <img src="/images/register-3.png" alt="fried chicken and fries">
+              <img src="/images/register-4.png" alt="Vietnamese pho">
             </div>
           </div>
           
-          
+        </div>
           
         </div>
       </div>

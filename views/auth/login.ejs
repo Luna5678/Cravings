@@ -18,8 +18,10 @@
             <h5 class="mb-4">Log back in to your account.</h5>
 
             <% if (typeof error !=='undefined' ) { %>
-              <p class="error-msg">Error: <%= error %>
-              </p>
+              <div class="error-container my-3">
+                <p class="error-msg">Error: <%= error %>
+                </p>
+              </div>
             <% } %>
             
             <form action="/login" method="POST">
