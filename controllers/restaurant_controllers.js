@@ -25,6 +25,7 @@ router.get('/:id', async(req,res,next) => {
       restaurant: foundRestaurant,
       reviews: foundReviews,
     }
+    console.log("THIS IS THE FOUND RESTAURANT", foundRestaurant);
     return res.render('restaurants/show.ejs', context);
 
   } catch (error) {
@@ -49,5 +50,20 @@ router.get('/search', function (req,res,next) {
     }
     )
 })
+
+// router.get('/surpriseme', async function (req,res,next) {
+//   try {
+//     const random = await Restaurant.aggregate([ { $sample: {size: 1}} ]).populate(result, {path: "restaurant"}, 
+//     function(err, data) {
+//       const randomId = data
+//       console.log("THIS IS THE RANDOM RESTAURANT OBJECT", randomId);
+//     })
+//     return res.redirect('/');
+//   } catch (error) {
+//     req.error = error;
+//     console.log(error);
+//     return next();
+//   }
+// })
 
 module.exports = router;
