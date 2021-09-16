@@ -7,14 +7,14 @@
   <%- include('../partials/nav') %>
 
   <main>
-    <div class="container">
-      <div class="row">
+    <div class="container mt-3 px-4">
+      <div class="row gx-5">
         
         <!-- Login Form Left Side -->
 
         <div class="col-lg-5 login-form-left">
           <div class="my-5 text-center">
-            <h1 class="mb-4">Cheers! Welcome back!</h1>
+            <h1 class="mb-4">Welcome back!</h1>
             <h5 class="mb-4">Log back in to your account.</h5>
 
             <% if (typeof error !=='undefined' ) { %>
@@ -42,10 +42,16 @@
         <!-- Login Form Right Side -->
 
         <div class="col-lg-7">
-          <img src="/images/login-1.png" alt="cheers" class="login-img">
-          <img src="/images/login-2.png" alt="bibimbap" class="login-img">
-          <img src="/images/login-3.png" alt="red velvet cake slice" class="login-img">
-          <img src="/images/login-4.png" alt="Indian rice dish" class="login-img">
+          <div class="row">
+            <div class="col collage-col">
+              <img src="/images/login-1.png" alt="cheers" class="login-img">
+              <img src="/images/login-2.png" alt="bibimbap">
+            </div>
+            <div class="col collage-col">
+              <img src="/images/login-3.png" alt="red velvet cake slice">
+              <img src="/images/login-4.png" alt="Indian rice dish">
+            </div>
+          </div>
         </div>
       </div>
     </div>

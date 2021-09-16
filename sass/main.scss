@@ -311,14 +311,33 @@ a#restaurant-link {
   background-color: rgba($yellow-color, 0.5);
 }
 
-// SECTION Log In Form
+// SECTION Log In
 .login-form-left {
   border: $yellow-color 3px solid;
   box-shadow: 0 0 10px 5px $yellow-color;
+  height: 55%;
+  max-height: 800px;
 }
 
-.login-img {
-  width: 300px;
+.collage-col {
+  max-width: 50%;
+  padding: 0 4px;
+
+  img {
+    vertical-align: middle;
+    width: 100%;
+    max-width: 330px;
+  }
+
+  img:nth-child(2) {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .collage-col {
+    margin-top: 50px;
+  }
 }
 
 // SECTION Registration
