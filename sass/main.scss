@@ -311,13 +311,19 @@ a#restaurant-link {
   background-color: rgba($yellow-color, 0.5);
 }
 
-// SECTION Submit Review Form
+// SECTION Log In Form
+.login-form-left {
+  border: $yellow-color 3px solid;
+  box-shadow: 0 0 10px 5px $yellow-color;
+}
+
+.login-img {
+  width: 300px;
+}
 
 // SECTION Registration
 
 .register-left {
-  border: $yellow-color 3px solid;
-  box-shadow: 0 0 10px 5px $yellow-color;
   height: 600px;
 }
 

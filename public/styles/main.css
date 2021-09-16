@@ -280,9 +280,16 @@ a#restaurant-link {
   background-color: rgba(255, 245, 194, 0.5);
 }
 
-.register-left {
+.login-form-left {
   border: #fff5c2 3px solid;
   box-shadow: 0 0 10px 5px #fff5c2;
+}
+
+.login-img {
+  width: 300px;
+}
+
+.register-left {
   height: 600px;
 }
 
