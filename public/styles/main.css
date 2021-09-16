@@ -27,13 +27,12 @@ input {
 }
 
 header {
-  background: url("/images/restaurant-index.png");
   height: 50vh;
-  min-height: 200px;
+  overflow: hidden;
+}
+header img {
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .search-border {
