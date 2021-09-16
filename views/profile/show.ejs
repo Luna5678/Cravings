@@ -19,7 +19,7 @@
 
     <div class="text-center mt-3">
       <h1><%= profile.username %>'s Profile</h1>
-    <img src="<%= profile.avatar %> " alt="<%= profile.username %> avatar image" class="img-fluid rounded-circle profile-avatar-img mb-4">
+    <img src="<%= profile.avatar %> " alt="<%= profile.username %> avatar image" class="img-fluid rounded-circle profile-avatar mb-4">
     <h2>About me:</h2>
     <p><%= profile.bio %></p>
     </div>
@@ -27,7 +27,7 @@
     <% if (typeof user !=='undefined' ) { %>
       <% if (profile.id===user.id) { %>
         <div class="text-end">
-          <a href="/<%= user.id %>/edit" class="btn rounded-pill text-end warning-button">Edit My Profile or Account</a>
+          <a href="/<%= user.id %>/edit" class="btn button red-button">Edit My Profile or Account</a>
         </div>
         <% } %>
           <% } %>
@@ -37,7 +37,7 @@
 
     <% for (let i = 0; i < reviews.length; i++) { %> 
       <% const review = reviews[i] %> 
-      <div class="mb-5">
+      <div class="mb-5 px-3">
         <a href="/restaurants/<%= review.restaurant.id %>">
           <h5 class="link-animation">
             <%= review.restaurant.name %>
@@ -65,7 +65,7 @@
         <div class="mb-2 fst-italic">
           <%= (review.createdAt).toLocaleDateString('en-US') %>
         </div>
-        <p class="mb-2">
+        <p class="mb-1">
           <%= review.content %>
         </p>
         
@@ -73,7 +73,7 @@
           <% if (profile.id===user.id) { %>
             <div class="text-end">
               <form action="/reviews/<%= review.id %>?_method=DELETE" method="POST" ">
-                <button type="submit" class="btn rounded-pill">Delete Review for <%= review.restaurant.name %> </button>
+                <button type="submit" class="btn button grey-button">Delete this Review</button>
               </form>
             </div>
             <% } %>

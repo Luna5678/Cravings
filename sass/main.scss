@@ -142,6 +142,20 @@ a {
   color: #b8b8b8;
 }
 
+.red-button {
+  border-color: $light-red-color;
+  color: white;
+  background-image: linear-gradient(45deg, white 50%, $light-red-color 50%);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 500px;
+  transition: background 0.5s ease-in-out;
+}
+.red-button:hover {
+  background-position: 0;
+  color: $light-red-color;
+}
+
 // SECTION Navbar
 .nav-container {
   width: 95%;
@@ -343,8 +357,11 @@ a#restaurant-link {
 // SECTION Registration
 
 // SECTION Profiles
-.profile-avatar-img {
-  width: 200px;
+.profile-avatar {
+  vertical-align: middle;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
   box-sizing: border-box;
   border: $yellow-color solid 5px;
   margin: auto;
