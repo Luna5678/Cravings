@@ -1,5 +1,5 @@
 <h1>Cravings</h1>
-<a href="http://cravings-ll.herokuapp.com/"><h2>http://cravings-ll.herokuapp.com/</h2></a>
+<h2>http://cravings-ll.herokuapp.com/</h2>
 
 Cravings is an app used to serach restaurants in Los Angeles, CA. You can search by restaurant name, cuisine, or other preferences. Each restaurant provides a full menu so you know what you're getting yourself into. They will also show their operation hours, address, phone number, and reviews - the full who, what, when, where, and why. Upon creating an account, you can customize your profile, add reviews, and check out reviews from other users.
 
