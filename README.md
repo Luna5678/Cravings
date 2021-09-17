@@ -35,7 +35,7 @@ Wireframe: https://www.figma.com/file/ucqG6Audj8B3yUWCkal54t/Cravings?node-id=0%
 Color palette: https://user-images.githubusercontent.com/70084759/132445707-d5059d5a-2a6c-4faa-bc32-5a18d3cb9b1d.png
 
 <h2>Entity Relationship Diagram</h2>
-<img src="/images/cravingsERD.png" width="383" height="422" />
+<img src="/public/images/cravingsERD.png" width="383" height="422" />
 
 <h3>Future Features</h3>
 <ul>
