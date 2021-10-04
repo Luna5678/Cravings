@@ -1,38 +1,85 @@
-<nav class="navbar navbar-expand-md sticky-top">
+<nav class="navbar navbar-expand-md sticky-top navbar-light" style="background-color: rgba(fff,fff,fff, 0.8)">
   <div class="container-fluid nav-container">
     <a class="navbar-brand" href="/">
       <img src="/images/logo.svg" alt="Brand logo" width="40" height="40" class="d-inline-block" />
       <span id="logo">Cravings</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="d-flex">
-        <a href="/restaurants" class="me-5 nav-link-animation">Restaurants</a>
-
-        <a href="/#about" class="me-5 nav-link-animation">About</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a href="/restaurants" class="me-5 nav-link-animation">Restaurants</a>
+        </li>
+        <li class="nav-item">
+          <a href="/#about" class="me-5 nav-link-animation">About</a>
+        </li>
 
         <% if (user) { %>
-          <a href="/profile/<%= user.id %> " class="me-5 nav-link-animation">
-            My Profile
-          </a>
-
-          <a href="/logout" class="me-5 nav-link-animation">Log Out</a>
+          <li class="nav-item">
+            <a href="/profile/<%= user.id %> " class="me-5 nav-link-animation">
+              My Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/logout" class="me-5 nav-link-animation">Log Out</a>
+          </li>
           <% } else { %> 
+          <li class="nav-item">
             <a href="/login" class="me-5 nav-link-animation">Log In</a>
-
+          </li>
+          <li class="nav-item">
             <a href="/register" class="button nav-button">
               Sign Up
             </a>
+          </li>
         <% } %> 
-        
+      </ul>
     </div>
 
   </div>
 </nav>
+
+<!-- <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
 
 <!-- Sign Up Form Modal
 
