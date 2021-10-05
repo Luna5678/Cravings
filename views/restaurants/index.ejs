@@ -7,7 +7,7 @@
     <main>
       <header id="restaurants-index-banner">
         <div class="d-flex justify-content-center align-items-end">
-          <h1 class="text-center my-4 rounded">Restaurants</h1>
+          <h1 class="text-center my-4">Restaurants</h1>
         </div>
       </header>
       
@@ -53,16 +53,23 @@
                             </p>
                             <% }) %>
                       </div>
-          
+                      
+                      <% let today = new Date(); %> 
+                      <% let weekday = today.getDay(); %>  
+                      <% const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] %>
                       <div class="col-8 lh-1">
-                        <p><small>Sunday: <%= restaurant.hours[0] %></small></p>
-                        <p><small>Monday: <%= restaurant.hours[1] %></small></p>
-                        <p><small>Tuesday: <%= restaurant.hours[2] %></small></p>
-                        <p><small>Wednesday: <%= restaurant.hours[3] %></small></p>
-                        <p><small>Thursday: <%= restaurant.hours[4] %></small></p>
-                        <p><small>Friday: <%= restaurant.hours[5] %></small></p>
-                        <p><small>Saturday: <%= restaurant.hours[6] %></small></p>
+                          <h5>Today's Store Hours</h5>
+                          <p>
+                            <%= weekdays[weekday] %>: 
+                            <%= restaurant.hours[weekday] %>
+                            <br />
+                          </p>
+                          <p class="link-animation">
+                            More Hours
+                          </p>
+
                       </div>
+
                     </div>
           
                   </div>
