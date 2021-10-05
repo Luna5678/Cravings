@@ -142,7 +142,8 @@ a {
 }
 
 .nav-container {
-  width: 95%;
+  width: 90%;
+  max-width: 1200px;
 }
 
 .navbar {
@@ -184,6 +185,10 @@ a {
 .nav-link-animation:hover {
   background-size: 4px 50px !important;
   color: white !important;
+}
+
+.navbar-nav {
+  gap: 10px 30px;
 }
 
 .home-search {
