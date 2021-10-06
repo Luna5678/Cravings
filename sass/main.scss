@@ -315,6 +315,15 @@ a#restaurant-link {
 }
 
 // SECTION Restaurant Show Page
+.carousel-item {
+  max-height: 50vh;
+}
+
+#restaurant-carousel .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
 
 .red-heading {
   color: $dark-red-color;

@@ -287,6 +287,16 @@ a#restaurant-link {
   min-height: 100%;
 }
 
+.carousel-item {
+  max-height: 50vh;
+}
+
+#restaurant-carousel .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+
 .red-heading {
   color: #ce1b12;
 }
