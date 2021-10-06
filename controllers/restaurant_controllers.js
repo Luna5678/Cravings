@@ -44,7 +44,8 @@ router.get('/search', function (req,res,next) {
     ]}, 
     function (err, data) {
       const context = {
-        restaurants: data
+        restaurants: data,
+        query: q
       }
       return res.render('restaurants/index.ejs', context)
     }

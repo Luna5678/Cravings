@@ -11,6 +11,9 @@
       
       <div>
         <h1 class="text-center my-4">Restaurants</h1>
+        <% if (typeof query !== "undefined") { %>
+          <h5 class="text-center">Search Results for "<%= query %>"...</h5>
+        <% } %> 
         <form action="/restaurants/search">
           <div class="my-4 input-group justify-content-center">
             <input type="text" class="form-control rounded-start border-2 py-2 search-border search-bar-index" placeholder="Search by restaurant or cuisine" name="q">
@@ -21,6 +24,14 @@
               </svg></button>
           </div>
         </form>
+        <% if (typeof query !=="undefined" ) { %>
+        
+        <div class="text-center">
+          <a href="/restaurants" class="button green-button my-3">View All Restaurants</a>
+        </div>
+          
+        <% } %>
+        
       </div>
 
       <!-- Restaurant list -->
