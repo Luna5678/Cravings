@@ -46,10 +46,10 @@
       
         <!-- Avatar Fields -->
         <div class="row justify-content-center mb-3">
-          <div class="col-2">
+          <div class="col-sm-2">
             <label for="avatarUrl">Avatar URL</label>
           </div>
-          <div class="col-5">
+          <div class="col-sm-5">
             <div class="input-field edit-input-field">
               <input type="text" name="avatar" class="form-control" id="avatarUrl" value="<%= user.avatar %>">
             </div>
@@ -58,10 +58,10 @@
         
         <!-- Username Fields -->
         <div class="row justify-content-center mb-3">
-          <div class="col-2">
+          <div class="col-sm-2">
             <label for="username">Username</label>
           </div>
-          <div class="col-5">
+          <div class="col-sm-5">
             <div class="input-field edit-input-field">
               <input type="text" name="username" class="form-control" id="username" value="<%= user.username %>">
             </div>
@@ -70,10 +70,10 @@
         
         <!-- Email Fields -->
         <div class="row justify-content-center mb-3">
-          <div class="col-2">
+          <div class="col-sm-2">
             <label for="email">Email</label>
           </div>
-          <div class="col-5">
+          <div class="col-sm-5">
             <div class="input-field edit-input-field">
               <input type="text" name="email" class="form-control" id="email" value="<%= user.email %>">
             </div>
@@ -82,10 +82,10 @@
         
         <!-- Bio Fields -->
         <div class="row justify-content-center mb-3">
-          <div class="col-2">
+          <div class="col-sm-2">
             <label for="bio">Bio</label>
           </div>
-          <div class="col-5">
+          <div class="col-sm-5">
             <div class="input-field edit-input-field">
               <textarea class="form-control" name="bio" id="bio"rows="2"><%= user.bio %></textarea>
             </div>
@@ -107,10 +107,10 @@
         <form action="/pw/<%= user.id %>?_method=PUT" method="POST">
         <!-- Password Fields -->
         <div class="row justify-content-center mb-3">
-          <div class="col-2">
+          <div class="col-sm-2">
             <label for="passwordOne">Password</label>
           </div>
-          <div class="col-5">
+          <div class="col-sm-5">
             <div class="input-field edit-input-field">
               <input type="password" name="password" class="form-control" id="passwordOne" placeholder="********" >
             </div>
@@ -120,10 +120,10 @@
         <!-- Confirm Password Fields -->
 
           <div class="row justify-content-center mb-3">
-            <div class="col-2">
+            <div class="col-sm-2">
               <label for="passwordTwo">Confirm Password</label>
             </div>
-            <div class="col-5">
+            <div class="col-sm-5">
               <div class="input-field edit-input-field">
                 <input type="password" name="passwordTwo" class="form-control" id="passwordTwo" placeholder="********" >
               </div>
@@ -135,7 +135,7 @@
         </form>
 
         <div class="text-center mb-5">
-          <a href="/restaurants" class="btn button grey-button">Cancel All Changes</a>
+          <a href="/profile/<%= user.id %>" class="btn button grey-button">Cancel All Changes</a>
         </div>
         
           <div class="text-center mb-5">
